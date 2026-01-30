@@ -1,0 +1,91 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+font-family:Segoe UI;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.music-player{
+background:rgba(255,255,255,.1);
+padding:30px;
+border-radius:20px;
+width:340px;
+backdrop-filter:blur(10px);
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.album-cover{text-align:center;margin-bottom:20px}
+
+.cover-art{
+width:150px;height:150px;
+margin:auto;
+background:#ff4d6d;
+border-radius:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:50px;
+color:white;
+animation:float 4s infinite;
+}
+
+@keyframes float{
+50%{transform:translateY(-8px)}
+}
+
+.track-info{text-align:center;color:white;margin:15px 0}
+
+.progress-bar{
+height:6px;
+background:#555;
+border-radius:10px;
+cursor:pointer;
+}
+
+.progress{height:100%;width:0;background:#ff4d6d;border-radius:10px}
+
+.time-info{
+display:flex;
+justify-content:space-between;
+color:#ccc;
+font-size:12px;
+margin:8px 0;
+}
+
+.player-controls{text-align:center;margin:15px 0}
+
+.control-btn{
+background:none;
+border:none;
+color:white;
+font-size:18px;
+margin:0 10px;
+cursor:pointer;
+}
+
+.play-btn{
+background:#ff4d6d;
+width:55px;height:55px;
+border-radius:50%;
+}
+
+.volume-control{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+color:white;
+}
+
+.playlist-section{margin-top:15px;color:white}
+
+.playlist-section li{
+padding:6px;
+cursor:pointer;
+border-radius:6px;
+}
+
+.playlist-section li.active{background:#ff4d6d}
