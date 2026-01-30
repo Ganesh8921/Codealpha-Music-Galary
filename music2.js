@@ -2,7 +2,7 @@ const songs = [
  { title:"Finding Her", artist:"Tanishka Bahl", src:"Finding Her (Female Version) _ Tanishka Bahl Kushagra Bharath Saaheal UR Debut.mp3" },
  { title:"Dhadkan (Slowed Reverb)", artist:"LoFi Mix", src:"dhadkan.mp3" },
  { title:"Dil Cheez Tujhe Dedi", artist:"Ankit Tiwari, Arijit Singh", src:"dil-cheez.mp3" },
-  { title:"Madhurashtakam", artist:"Radha Krishna LoFi", src:"madhurashtakam.mp3" },
+ { title:"Madhurashtakam", artist:"Radha Krishna LoFi", src:"madhurashtakam.mp3" },
  { title:"Nasha x Let The Music Play", artist:"Mashup LoFi", src:"nasha.mp3" },
  { title:"Dil Mera tod Ke ", artist:"Sad Mashup LoFi", src:"dil-mera.mp3" }
 ];
@@ -27,11 +27,10 @@ function loadSong(i){
  title.innerText = songs[i].title;
  artist.innerText = songs[i].artist;
  audio.src = songs[i].src;
- audio.load();              // <-- important
- playIcon.className = "fas fa-play";
+ audio.play();
+ playIcon.className = "fas fa-pause";
  updateActive();
 }
-
 
 function playPause(){
  if(audio.paused){
@@ -94,4 +93,3 @@ function updateActive(){
   li.classList.toggle("active", i === index);
  });
 }
-
